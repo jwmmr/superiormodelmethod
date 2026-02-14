@@ -8,3 +8,5 @@ The install packages also tries to move the paint.net extension into the effects
 https://forums.getpaint.net/topic/111003-reduce-colors-of-image-and-use-custom-palette-for-colors/ get TR's Color Reducer here if you are suspicious
 
 The video really tells rest of the story
+
+This method also supports transparent backgrounds, so you can make stickers or whatever
