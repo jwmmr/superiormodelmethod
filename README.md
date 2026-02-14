@@ -1,6 +1,6 @@
 It's really simple.
 
-The rblx place file holds the setup for aligning thumbnail etc. so all you have to do is import and upload
+The rbxl place file holds the setup for aligning thumbnail etc. so all you have to do is import and upload
 
 The install packages simply installs pip, then numpy and pillow packages. numpy is just a numbers library, pillow has functions for image editing etc. that's it, you can install those yourself, let me know if there's any problems
 
