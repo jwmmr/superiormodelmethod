@@ -1,6 +1,4 @@
 # install_requirements.py
-import os
-import shutil
 import subprocess
 import sys
 
@@ -61,39 +59,12 @@ def install_packages():
     
     print("\n✔ All required packages have been installed successfully!")
 
-def move_dll_file():
-    """Moves TRsColorReducer.dll to Paint.NET Effects folder."""
-    dll_name = "TRsColorReducer.dll"
-    target_dir = r"C:\Program Files\paint.net\Effects"
-    
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    source_path = os.path.join(script_dir, dll_name)
-    
-    if not os.path.exists(source_path):
-        print(f"\n❌ Error: {dll_name} not found in script directory.")
-        return False
-    
-    if not os.path.exists(target_dir):
-        print(f"\n❌ Error: Paint.NET Effects folder not found at: {target_dir}")
-        return False
-    
-    try:
-        shutil.copy2(source_path, target_dir)
-        print(f"\n✔ Successfully copied {dll_name} to Paint.NET Effects folder.")
-        return True
-    except Exception as e:
-        print(f"\n❌ Failed to copy {dll_name}. Error: {e}")
-        return False
-
 if __name__ == "__main__":
     print("=== Checking for pip ===")
     ensure_pip()
     
     print("\n=== Checking for required packages ===")
     install_packages()
-    
-    print("\n=== Moving TRsColorReducer.dll to Paint.NET Effects ===")
-    move_dll_file()
     
     # Keep console open
     print("\n✅ Setup completed. Review output above for any errors.")
