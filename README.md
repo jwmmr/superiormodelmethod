@@ -1,12 +1,19 @@
 It's really simple.
 
-The rbxl place file holds the setup for aligning thumbnail etc. so all you have to do is import and upload
+Run install packages, all it does is install numpy and pillow
 
-The install packages simply installs pip, then numpy and pillow packages. numpy is just a numbers library, pillow has functions for image editing etc. that's it, you can install those yourself, let me know if there's any problems
+meshgenerator_adaptive.py is the main script, run this.
 
-The install packages also tries to move the paint.net extension into the effects folder, but it can't without admin access so it'll likely fail, you can just import it yourself.
-https://forums.getpaint.net/topic/111003-reduce-colors-of-image-and-use-custom-palette-for-colors/ get TR's Color Reducer here if you are suspicious
+It will ask for a path, you can drop an image into console, or paste a path to one.
 
-The video really tells rest of the story
+It will then ask for quality, simply press enter for default, higher quality may use 2-4 so meshes for higher quality result. Default tries to be 1 mesh only.
 
-This method also supports transparent backgrounds, so you can make stickers or whatever
+You now have to upload the meshes into studio
+
+Then go into the browser on Roblox creator dashboard, copy each mesh id, in order (left to right, reading direction), paste them individually into the console and press enter for each one.
+
+Repeat the same for images (they are automatically uploaded with meshes)
+
+Now open the rbxlx file and upload the model
+
+Troubleshooting: Pasted the wrong ids or accidentally pressed enter without input? You can edit the ids in the roblox_asset_ids.json and rerun roblox_model_export.py to update the rblx file
